@@ -1,0 +1,70 @@
+body{
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Flag Container */
+.flag{
+    width: 500px;
+    height: 300px;
+    background-color: #009c3b;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.4s;
+}
+
+.flag:hover{
+    transform: scale(1.05);
+}
+
+/* Yellow Diamond */
+.diamond{
+    width: 220px;
+    height: 220px;
+    background-color: #ffdf00;
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    transform: rotate(45deg);
+}
+
+/* Blue Circle */
+.circle{
+    width: 120px;
+    height: 120px;
+    background-color: #002776;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: rotate(-45deg);
+}
+
+/* White Band */
+.circle::before{
+    content: "";
+    width: 150px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+    top: 48px;
+    left: -15px;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+}
+
+/* Decorative Stars */
+.circle::after{
+    content: "★ ★ ★ ★ ★";
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 25px;
+    left: 18px;
+    letter-spacing: 4px;
+}
